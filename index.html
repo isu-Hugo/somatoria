@@ -7,17 +7,45 @@
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
+    <div id="form" class="form">
+        <div id="campos" class="campos"></div>
+    </div>
     <header>Corrige somatória</header>
     
     <main>
-        <table>
-            <th>Nº</th>
-            <th>SOMA</th>
-            <th></th>
+        <table id="question_table">
+            <thead>    
+                <tr>
+                    <th>Nº</th>
+                    <th>RESPOSTA</th>
+                    <th>RESUTADO</th>
+                    <th>GABARITO</th>
+                    <th>EDITAR</th>
+                    <th>EXCLUIR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text" name="" id=""></td>
+                    <td>19</td>
+                    <td>16, 2, 1</td>
+                    <td style="cursor: pointer;", onclick="update(0)">✏️</td>
+                </tr>
+            </tbody>
         </table>
+
+        <div class="options">
+            <input type="number" placeholder="Valor de cada questão" id="valor_questao">
+            <button onclick="create_question()">Nova questão</button>
+            <button onclick="limpar()">Limpar</button>
+            <button onclick="corrige()">Corrigir</button>
+        </div>
     </main>
     
-    <footer>© Hugo E. Contreras - Em apoio ao Colégio Olavo Bilac, Itambé-PR</footer>
+    <footer>© Hugo E. Contreras - Em apoio ao Colégio Olavo Bilac, Itambé-PR. 2025</footer>
     <script src="./src/js/config.js"></script>
+    <script src="./src/js/btnfunc.js"></script>
+    <script src="./src/js/storage.js"></script>
 </body>
 </html>
